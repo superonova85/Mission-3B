@@ -3,29 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beranda</title>
+    <title>Document</title>
     <script src="https://unpkg.com/feather-icons"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .nav {
+          @apply relative mr-5 text-gray-500 hover:text-red-500;
+        }
+        .nav::after {
+          @apply content-[''] bg-red-500 h-[3px] w-[0%] left-0 -bottom-[5px] absolute rounded-xl duration-300;
+        }
+        .nav:hover::after {
+          @apply w-1/2;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header class="w-full h-14 fixed z-10 bg-white">
-      <nav class="w-10/12 mx-auto flex items-center justify-between">
-        <img src="img/logoNav.png" alt="Logo Pembelajaran" />
-        <ul class="flex w-[105px] h-14 justify-between items-center">
-          <li class="text-text">Kategori</li>
-          <li><img class="w-8 rounded-lg" src="img/navbar.png" alt="" /></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="w-full h-14"></div>
-    <main class="w-full bg-yellow-100">
-      <section
-        class="absolute w-10/12 h-svh mt-28 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg"
-      >
+    <!-- Container Header -->
+    <div class="fixed z-20 w-full h-14 flex justify-between px-32 bg-white">
+      <img src="img/logoNav.png" alt="Logo Pembelajaran" />
+      <ul class="flex w-[105px] h-14 justify-between items-center">
+        <li class="text-text">Kategori</li>
+        <li><img class="w-8 rounded-lg" src="img/navbar.png" alt="" /></li>
+      </ul>
+    </div>
+    <!-- Container Main -->
+    <div class="w-full h-[2340px] items-center relative bg-yellow-100">
+      <section class="relative w-10/12 h-svh mx-auto top-[110px] rounded-lg">
         <div class="mb-7">
           <div
             class="w-full h-[325px] absolute rounded-lg bg-black opacity-55"
@@ -55,20 +61,34 @@
             alt=""
           />
         </div>
-        <h1 class="text-3xl">Koleksi Video Pembelajaran Unggulan</h1>
+        <h1 class="text-3xl font-semibold">
+          Koleksi Video Pembelajaran Unggulan
+        </h1>
         <h5 class="text-text mt-2">
           Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!
         </h5>
-        <nav class="my-8 tracking-wide">
+        <!-- navbar child start -->
+        <div class="flex my-5">
+          <a href="" class="nav">Semua Kelas</a>
+          <a href="" class="nav">Pemasaran</a>
+          <a href="" class="nav">Desain</a>
+          <a href="" class="nav">Pengembangan Diri</a>
+          <a href="" class="nav">Semua Kelas</a>
+          <a href="" class="nav">Bisnis</a>
+        </div>
+        <!-- navbar child end -->
+        <!-- <nav class="my-8 tracking-wide">
           <ul class="flex gap-4">
-            <li><a class="hover:text-red-400" href="#">Semua Kelas</a></li>
-            <li><a href="#">Pemasaran</a></li>
-            <li><a href="#">Desain</a></li>
-            <li><a href="#">Pengembangan Diri</a></li>
-            <li><a href="#">Semua Kelas</a></li>
-            <li><a href="#">Bisnis</a></li>
+            <li><a class="hover:text-red-600" href="#">Semua Kelas</a></li>
+            <li><a class="hover:text-red-600" href="#">Pemasaran</a></li>
+            <li><a class="hover:text-red-600" href="#">Desain</a></li>
+            <li>
+              <a class="hover:text-red-600" href="#">Pengembangan Diri</a>
+            </li>
+            <li><a class="hover:text-red-600" href="#">Semua Kelas</a></li>
+            <li><a class="hover:text-red-600" href="#">Bisnis</a></li>
           </ul>
-        </nav>
+        </nav> -->
         <!-- kumpulan card start -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <!-- card 1 -->
@@ -144,7 +164,7 @@
           <!-- card 3 -->
           <article class="p-4 bg-white rounded-lg">
             <img
-              class="w-72 h-[180px] object-cover rounded-xl"
+              class="w-72 h-48 object-cover rounded-xl"
               src="img/card3.jpeg"
               alt=""
             />
@@ -288,7 +308,7 @@
           <!-- card 7 -->
           <article class="p-4 bg-white rounded-lg">
             <img
-              class="w-72 h-[180px] object-cover rounded-xl"
+              class="w-72 h-48 object-cover rounded-xl"
               src="img/card7.jpeg"
               alt=""
             />
@@ -327,7 +347,7 @@
           <!-- card 8 -->
           <article class="p-4 bg-white rounded-lg">
             <img
-              class="w-72 h-[180px] object-cover rounded-xl"
+              class="w-72 h-48 object-cover rounded-xl"
               src="img/card8.jpeg"
               alt=""
             />
@@ -364,7 +384,9 @@
             </div>
           </article>
           <!-- card 9 -->
-          <article class="p-4 bg-white rounded-lg">
+          <article
+            class="p-4 bg-white rounded-lg border-solid border-3 border-gray-500"
+          >
             <img class="object-cover rounded-xl" src="img/card9.jpeg" alt="" />
             <h2 class="my-2 text-lg font-bold">
               Big 4 Auditor Financial Analyst
@@ -422,10 +444,10 @@
                   name="email"
                   id="email"
                   placeholder="Masukkan Emailmu"
-                  class="w-full h-12 border-none outline-none rounded-lg px-5"
+                  class="w-full h-12 border-none outline-none font-semibold rounded-lg px-5"
                 />
                 <button
-                  class="absolute right-[8px] top-2 rounded-lg bg-yellow-500 py-1 px-4 text-white"
+                  class="absolute right-[8px] top-2 rounded-lg bg-yellow-500 py-1 px-4 font-semibold text-white"
                 >
                   Subscribe
                 </button>
@@ -439,11 +461,14 @@
           />
         </div>
       </section>
-    </main>
-    <footer class="relative w-10/12 mx-auto bg-yellow-500">
-      <div class="flex justify-between">
+    </div>
+    <!-- Container Footer -->
+    <div class="w-full h-[300px]">
+      <div
+        class="relative w-10/12 mx-auto rounded-lg bg-white flex justify-between my-6"
+      >
         <div class="w-72">
-          <img src="img/logoNav.png" alt="" />
+          <img class="mb-4" src="img/logoNav.png" alt="" />
           <p class="font-bold text-sm">
             Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!
           </p>
@@ -451,15 +476,15 @@
           <p>+62-877-7123-1234</p>
         </div>
         <div></div>
-        <ul>
+        <ul class="leading-8">
           <li class="font-bold">Kategori</li>
-          <li>Digital $ Teknologi</li>
+          <li>Digital & Teknologi</li>
           <li>Pemasaran</li>
           <li>Manajemen Bisnis</li>
           <li>Pengembangan Diri</li>
           <li>Desain</li>
         </ul>
-        <ul>
+        <ul class="leading-8">
           <li class="font-bold">Perusahaan</li>
           <li>Tentang Kami</li>
           <li>FAQ</li>
@@ -467,31 +492,33 @@
           <li>Ketentuan Layanan</li>
           <li>Bantuan</li>
         </ul>
-        <ul>
+        <ul class="leading-8">
           <li class="font-bold">Komunitas</li>
           <li>Tips Sukses</li>
           <li>Blog</li>
         </ul>
       </div>
-      <hr class="mx-auto border-t-2 border-gray-500 my-4" />
-      <div class="h-12 flex justify-between mx-auto items-center bg-red-400">
-        <p>@2023 Gerobak Sayur All Rights Reserved.</p>
-        <ul class="flex gap-2">
-          <li class="border-2 rounded-full p-1">
-            <i class="h-4" data-feather="linkedin"></i>
-          </li>
-          <li class="border-2 rounded-full p-1">
-            <i class="h-4" data-feather="facebook"></i>
-          </li>
-          <li class="border-2 rounded-full p-1">
-            <i class="h-4" data-feather="instagram"></i>
-          </li>
-          <li class="border-2 border-gray-900 rounded-full p-1">
-            <i class="h-4" data-feather="twitter"></i>
-          </li>
-        </ul>
+      <div class="w-10/12 mx-auto">
+        <hr class="mx-auto border-t-2 border-gray-500 my-4" />
+        <div class="h-12 flex justify-between mx-auto items-center">
+          <p>@2023 Gerobak Sayur All Rights Reserved.</p>
+          <ul class="flex gap-2">
+            <li class="border-2 rounded-full p-1">
+              <i class="h-4" data-feather="linkedin"></i>
+            </li>
+            <li class="border-2 rounded-full p-1">
+              <i class="h-4" data-feather="facebook"></i>
+            </li>
+            <li class="border-2 rounded-full p-1">
+              <i class="h-4" data-feather="instagram"></i>
+            </li>
+            <li class="border-2 rounded-full p-1">
+              <i class="h-4" data-feather="twitter"></i>
+            </li>
+          </ul>
+        </div>
       </div>
-    </footer>
+    </div>
     <script>
       feather.replace();
     </script>
