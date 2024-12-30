@@ -7,18 +7,18 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header class="w-full h-14 fixed z-10 bg-white">
+  <body class="bg-blue-300">
+    <!-- navbar -->
+    <div class="w-full h-14 fixed z-10 bg-transparent">
       <nav class="w-10/12 h-14 mx-auto items-center flex justify-between">
         <img src="img/logoNav.png" alt="Logo Pembelajaran" />
       </nav>
-    </header>
-    <div class="w-full h-14"></div>
-
-    <main class="w-full h-svh bg-yellow-100">
-      <form
-        class="min-w-96 py-5 px-7 bg-white absolute border-solid border-2 rounded-lg flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-lg"
-        action="#"
+    </div>
+    <!-- main -->
+    <div class=" h-screen bg-yellow-100 flex">
+      <!-- form -->
+      <div
+        class=" w-[29rem] py-5 px-7 bg-white border-solid border-2 rounded-lg flex flex-col shadow-lg m-auto"
       >
         <h1 class="text-3xl text-center">Pendaftaran Akun</h1>
         <h3 class="text-text text-center my-2">
@@ -73,7 +73,9 @@
           />
         </div>
         <!-- Puyeng Pusing End -->
-        <label class="text-text mt-5" for="password">Kata Sandi <span class="text-star">*</span></label>
+        <label class="text-text mt-5" for="password"
+          >Kata Sandi <span class="text-star">*</span></label
+        >
         <div class="relative">
           <input
             class="text-input-black border-solid border-2 w-96 h-11 mt-1 rounded-lg p-2"
@@ -132,8 +134,9 @@
           <img class="h-6 mr-3" src="img/logoG.png " alt="Logo Google" /> Masuk
           dengan Google
         </button>
-      </form>
-    </main>
+      </div>
+      <form action="#"></form>
+    </div>
     <script>
       feather.replace();
     </script>

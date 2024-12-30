@@ -9,14 +9,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="w-full h-14 fixed z-10 bg-white">
+    <!-- navbar -->
+    <div class="w-full h-14 fixed z-10 bg-white">
       <nav class="w-10/12 h-14 mx-auto items-center flex justify-between">
         <img src="img/logoNav.png" alt="Logo Pembelajaran" />
       </nav>
-    </header>
-    <div class="w-full h-14"></div>
-
-    <main class="w-full h-svh bg-yellow-100">
+    </div>
+    <!-- main -->
+    <div class="w-full h-svh bg-yellow-100">
       <form
         class="min-w-96 py-5 px-7 bg-white absolute border-solid border-2 rounded-lg flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-lg"
         action="#"
@@ -53,9 +53,7 @@
             data-feather="eye-off"
           ></i>
         </div>
-
         <span class="text-text text-right my-4">Lupa password?</span>
-
         <button
           class="w-96 h-11 rounded-lg py-1 bg-green-500 text-white"
           type="submit"
@@ -68,13 +66,11 @@
         >
           Daftar
         </button>
-
         <div class="my-4 grid grid-cols-3 text-text items-center">
           <hr class="border-gray-300" />
           <p class="text-center">atau</p>
           <hr class="border-gray-300" />
         </div>
-
         <button
           class="w-96 h-11 rounded-lg py-1 border-solid border-2 text-text flex justify-center items-center"
           type="submit"
@@ -83,7 +79,8 @@
           dengan Google
         </button>
       </form>
-    </main>
+    </div>
+
     <script>
       feather.replace();
     </script>
