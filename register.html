@@ -7,20 +7,21 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-blue-300">
-    <!-- navbar -->
-    <div class="w-full h-14 fixed z-10 bg-transparent">
-      <nav class="w-10/12 h-14 mx-auto items-center flex justify-between">
-        <img src="img/logoNav.png" alt="Logo Pembelajaran" />
-      </nav>
+  <body>
+    <!-- header -->
+    <div
+      class="fixed z-20 w-full h-14 flex justify-between px-[6.2rem] bg-white shadow-lg sm:shadow-none"
+    >
+      <img src="img/logoNav.png" alt="Logo Pembelajaran" />
     </div>
+    <div class="w-full h-14"></div>
     <!-- main -->
-    <div class=" h-screen bg-yellow-100 flex">
+    <div class="flex items-center h-[60rem] bg-yellow-100">
       <!-- form -->
       <div
-        class=" w-[29rem] py-5 px-7 bg-white border-solid border-2 rounded-lg flex flex-col shadow-lg m-auto"
+        class="w-[29rem] py-5 px-7 bg-white border-solid border-2 rounded-lg flex flex-col shadow-lg m-auto"
       >
-        <h1 class="text-3xl text-center">Pendaftaran Akun</h1>
+        <h1 class="text-3xl font-bold text-center">Pendaftaran Akun</h1>
         <h3 class="text-text text-center my-2">
           Yuk, daftarkan akunmu sekarang juga!
         </h3>
@@ -44,7 +45,6 @@
           id="email"
           required
         />
-
         <!-- Puyeng Pusing Start -->
         <label class="text-text text-left mt-6" for="contact"
           >No. Hp <span class="text-star">*</span></label
@@ -121,7 +121,7 @@
           Masuk
         </button>
 
-        <div class="my-4 grid grid-cols-3 text-text items-center">
+        <div class="w-96 my-4 grid grid-cols-3 text-text items-center">
           <hr class="border-gray-300" />
           <p class="text-center">atau</p>
           <hr class="border-gray-300" />

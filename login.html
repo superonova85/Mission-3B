@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <script src="https://unpkg.com/feather-icons"></script>
-    <link href="src/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- navbar -->
-    <div class="w-full h-14 fixed z-10 bg-white">
-      <nav class="w-10/12 h-14 mx-auto items-center flex justify-between">
-        <img src="img/logoNav.png" alt="Logo Pembelajaran" />
-      </nav>
+    <!-- header -->
+    <div
+      class="fixed z-20 w-full h-14 flex justify-between px-[6.2rem] bg-white shadow-lg sm:shadow-none"
+    >
+      <img src="img/logoNav.png" alt="Logo Pembelajaran" />
     </div>
+    <div class="w-full h-14"></div>
     <!-- main -->
-    <div class="w-full h-svh bg-yellow-100">
+    <div class="w-full h-[40rem] bg-yellow-100 flex items-center">
       <form
-        class="min-w-96 py-5 px-7 bg-white absolute border-solid border-2 rounded-lg flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-lg"
+        class="w-[443px] py-5 px-7 bg-white border-solid border-2 rounded-lg flex flex-col shadow-lg m-auto"
         action="#"
       >
-        <h1 class="text-3xl text-center">Masuk ke Akun</h1>
+        <h1 class="text-3xl font-bold text-center">Masuk ke Akun</h1>
         <h3 class="text-text text-center my-2">
           Yuk, lanjutin belajarmu di videobelajar.
         </h3>
-
         <label class="text-text text-left mt-6" for="email"
           >E-Mail <span class="text-star">*</span></label
         >
@@ -36,7 +35,6 @@
           id="email"
           required
         />
-
         <label class="text-text mt-5" for="password"
           >Kata Sandi <span class="text-star">*</span></label
         >
@@ -80,7 +78,6 @@
         </button>
       </form>
     </div>
-
     <script>
       feather.replace();
     </script>
